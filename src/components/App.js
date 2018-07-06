@@ -13,6 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        // al header le mandamos los props, en este caso, son required  
         <Header title="Code" items={items} />
         <Content />
         <Footer copyrigth="&copy; Pablo 2018" />

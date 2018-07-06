@@ -1,5 +1,7 @@
 // Dependencies
 import React, { Component } from 'react';
+  // el prop es para datos predefinidos, como se define abajo
+  // en el static, y que no van a estar cambiando 
 import PropTypes from 'prop-types';
 
 // Assets
