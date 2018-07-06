@@ -1,5 +1,6 @@
 // Dependencies
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 // Components
 import Header from "./Global/Header";
@@ -10,12 +11,16 @@ import Footer from "./Global/Footer";
 import items from "../data/menu";
 
 class App extends Component {
+  static PropTypes = {
+    children: PropTypes.object.isRequired
+  }
   render() {
+    const { children } = this.props;
+
     return (
       <div className="App">
-        // al header le mandamos los props, en este caso, son required  
-        <Header title="Code" items={items} />
-        <Content />
+        <Header title="Code" items={items} /> 
+        <Content body={children} />
         <Footer copyrigth="&copy; Pablo 2018" />
       </div>
     );

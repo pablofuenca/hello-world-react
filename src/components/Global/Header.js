@@ -1,8 +1,9 @@
 // Dependencies
 import React, { Component } from 'react';
   // el prop es para datos predefinidos, como se define abajo
-  // en el static, y que no van a estar cambiando 
+  // en el static, y que no van a estar cambiando
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';  // para crear enlaces
 
 // Assets
 import logo from './images/logo.svg';
@@ -25,7 +26,11 @@ class Header extends Component {
           <img src={logo} alt="logo" />
           <h2>{title}</h2>
           <ul className="Menu">
-            {items && items.map((item, key) => <li key={key}>{item.title}</li>)}
+            {
+              items && items.map(
+                (item, key) => <li key={key}><Link to={item.url}>{item.title}</Link></li>
+              )
+            }
           </ul>
         </header>
       </div>
