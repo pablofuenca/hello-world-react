@@ -11,6 +11,7 @@ class Footer extends Component {
   };
 
   render() {
+    // default value: &copy; React 2018
     const { copyrigth = '&copy; React 2018' } = this.props;
 
     return (
